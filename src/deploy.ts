@@ -144,7 +144,7 @@ export async function deployStack(
     cfn,
     stack,
     {
-      ChangeSetName: `${params.StackName}-CS`,
+      ChangeSetName: `${params.StackName}-CS-${new Date().getTime()}`,
       ...{
         StackName: params.StackName,
         TemplateBody: params.TemplateBody,
